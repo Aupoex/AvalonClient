@@ -1,0 +1,23 @@
+<UserControl x:Class="CefFlashBrowser.Views.Sidebar.Modules.PetCalculatorModule"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Button Height="48"
+            Margin="16,0"
+            Padding="14,0"
+            HorizontalContentAlignment="Left"
+            Background="#FF2C323B"
+            BorderBrush="#FF4B535F"
+            Foreground="White"
+            Click="OpenCalculatorClick">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Margin="0,0,10,0"
+                       VerticalAlignment="Center"
+                       FontFamily="Segoe UI Emoji"
+                       FontSize="18"
+                       Text="🧮"/>
+            <TextBlock VerticalAlignment="Center"
+                       FontSize="14"
+                       Text="打开精灵计算器"/>
+        </StackPanel>
+    </Button>
+</UserControl>

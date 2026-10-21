@@ -54,13 +54,9 @@ namespace CefFlashBrowser.Data
             SwfPlayerPath = Path.Combine(AssetsPath, "SwfPlayer\\swfplayer.html");
             SubprocessPath = Path.Combine(CefDllPath, "CefSharp.BrowserSubprocess.exe");
 
-            var userDocumentPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             var localAppDataPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
 
-            // Older versions stored the CefFlashBrowser folder in the user's Documents directory.
-            // Since v1.1.8, it has moved to LocalAppData. GetRedirectDirectory returns the old
-            // directory if it exists; otherwise, it returns the new directory.
-            DataPath = DirectoryHelper.GetRedirectDirectory(userDocumentPath, "CefFlashBrowser\\", localAppDataPath);
+            DataPath = Path.Combine(localAppDataPath, "AvalonSeerClient\\");
 
             FavoritesPath = Path.Combine(DataPath, "favorites.json");
             SettingsPath = Path.Combine(DataPath, "settings.json");

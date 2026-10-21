@@ -78,8 +78,8 @@ if (-not (Test-Path $publishDir)) {
 
 # -- 8. Create zip archives ----------------------------------------------
 $archives = @(
-    @{ Source = $releaseX86; Name = "FlashBrowser_x86_v$version.zip" }
-    @{ Source = $releaseX64; Name = "FlashBrowser_x64_v$version.zip" }
+    @{ Source = $releaseX86; Name = "AvalonSeerClient_x86_v$version.zip" }
+    @{ Source = $releaseX64; Name = "AvalonSeerClient_x64_v$version.zip" }
 )
 
 foreach ($arch in $archives) {

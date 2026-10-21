@@ -3,6 +3,7 @@ using CefFlashBrowser.Infrastructure.Wpf;
 using CefFlashBrowser.Services;
 using CefFlashBrowser.Singleton;
 using CefFlashBrowser.Utils;
+using CefFlashBrowser.Views;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -99,28 +100,7 @@ namespace CefFlashBrowser
                 RenderOptions.ProcessRenderMode = RenderMode.SoftwareOnly;
             }
 
-            if (GlobalData.Settings.FirstStart)
-            {
-                if (WindowManager.ShowSelectLanguageDialog())
-                {
-                    GlobalData.Settings.FirstStart = false;
-                    WindowManager.ShowMainWindow();
-                }
-                else
-                {
-                    Shutdown();
-                    return;
-                }
-            }
-            else if (e.Args.Length == 0)
-            {
-                WindowManager.ShowMainWindow();
-            }
-            else
-            {
-                ExecuteArguments(e.Args);
-                GlobalData.IsStartWithoutMainWindow = true;
-            }
+            WindowManager.ShowWindow<GameWindow>(singleton: true);
 
             ShutdownMode = ShutdownMode.OnLastWindowClose;
             DrainPendingArgs();
@@ -128,29 +108,7 @@ namespace CefFlashBrowser
 
         private void ExecuteArguments(string[] args)
         {
-            if (args.Length == 0)
-            {
-                WindowManager.ShowMainWindow();
-                GlobalData.IsStartWithoutMainWindow = false;
-            }
-            else
-            {
-                foreach (var arg in args)
-                {
-                    if (UrlHelper.IsLocalSwfFile(arg))
-                    {
-                        WindowManager.ShowSwfPlayer(arg);
-                    }
-                    else if (UrlHelper.IsLocalSolFile(arg))
-                    {
-                        WindowManager.ShowSolEditorWindow(arg);
-                    }
-                    else // open browser for other urls
-                    {
-                        WindowManager.ShowBrowser(arg);
-                    }
-                }
-            }
+            WindowManager.ShowWindow<GameWindow>(singleton: true);
         }
 
         public ResourceDictionary GetNamedResourceDictionary(string name)

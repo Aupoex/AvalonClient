@@ -31,7 +31,7 @@ namespace CefFlashBrowser
             try
             {
                 RegisterServices();
-                _mutex = new Mutex(true, "CefFlashBrowser", out bool isNewInstance);
+                _mutex = new Mutex(true, "AvalonSeerClient", out bool isNewInstance);
 
                 Win32.SetDllDirectory(GlobalData.CefDllPath);
                 AppDomain.CurrentDomain.AssemblyResolve += ResolveCefSharpAssembly;
@@ -53,7 +53,7 @@ namespace CefFlashBrowser
                     InitTheme();
 
                     LogHelper.LogInfo($"Application started successfully, pid: {Process.GetCurrentProcess().Id}");
-                    LogHelper.LogInfo($"CefFlashBrowser Version: {Assembly.GetExecutingAssembly().GetName().Version}");
+                    LogHelper.LogInfo($"AvalonSeerClient Version: {Assembly.GetExecutingAssembly().GetName().Version}");
 
                     app.Run();
                     cts.Cancel();

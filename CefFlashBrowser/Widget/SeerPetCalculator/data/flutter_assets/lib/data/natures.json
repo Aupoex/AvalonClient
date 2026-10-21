@@ -1,0 +1,154 @@
+﻿{
+	"natures": [
+		{
+			"id": 0,
+			"name": "无",
+			"increase": null,
+			"decrease": null
+		},
+		{
+			"id": 1,
+			"name": "孤独",
+			"increase": "Atk",
+			"decrease": "Def"
+		},
+		{
+			"id": 2,
+			"name": "开朗",
+			"increase": "Spd",
+			"decrease": "SpAtk"
+		},
+		{
+			"id": 3,
+			"name": "勇敢",
+			"increase": "Atk",
+			"decrease": "Spd"
+		},
+		{
+			"id": 4,
+			"name": "天真",
+			"increase": "Spd",
+			"decrease": "SpDef"
+		},
+		{
+			"id": 5,
+			"name": "固执",
+			"increase": "Atk",
+			"decrease": "SpAtk"
+		},
+		{
+			"id": 6,
+			"name": "保守",
+			"increase": "SpAtk",
+			"decrease": "Atk"
+		},
+		{
+			"id": 7,
+			"name": "调皮",
+			"increase": "Atk",
+			"decrease": "SpDef"
+		},
+		{
+			"id": 8,
+			"name": "稳重",
+			"increase": "SpAtk",
+			"decrease": "Def"
+		},
+		{
+			"id": 9,
+			"name": "大胆",
+			"increase": "Def",
+			"decrease": "Atk"
+		},
+		{
+			"id": 10,
+			"name": "冷静",
+			"increase": "SpAtk",
+			"decrease": "Spd"
+		},
+		{
+			"id": 11,
+			"name": "悠闲",
+			"increase": "Def",
+			"decrease": "Spd"
+		},
+		{
+			"id": 12,
+			"name": "马虎",
+			"increase": "SpAtk",
+			"decrease": "SpDef"
+		},
+		{
+			"id": 13,
+			"name": "顽皮",
+			"increase": "Def",
+			"decrease": "SpAtk"
+		},
+		{
+			"id": 14,
+			"name": "沉着",
+			"increase": "SpDef",
+			"decrease": "Atk"
+		},
+		{
+			"id": 15,
+			"name": "无虑",
+			"increase": "Def",
+			"decrease": "SpDef"
+		},
+		{
+			"id": 16,
+			"name": "温顺",
+			"increase": "SpDef",
+			"decrease": "Def"
+		},
+		{
+			"id": 17,
+			"name": "胆小",
+			"increase": "Spd",
+			"decrease": "Atk"
+		},
+		{
+			"id": 18,
+			"name": "狂妄",
+			"increase": "SpDef",
+			"decrease": "Spd"
+		},
+		{
+			"id": 19,
+			"name": "急躁",
+			"increase": "Spd",
+			"decrease": "Def"
+		},
+		{
+			"id": 20,
+			"name": "慎重",
+			"increase": "SpDef",
+			"decrease": "SpAtk"
+		},
+		{
+			"id": 21,
+			"name": "害羞",
+			"increase": null,
+			"decrease": null
+		},
+		{
+			"id": 22,
+			"name": "坦率",
+			"increase": null,
+			"decrease": null
+		},
+		{
+			"id": 23,
+			"name": "浮躁",
+			"increase": null,
+			"decrease": null
+		},
+		{
+			"id": 24,
+			"name": "认真",
+			"increase": null,
+			"decrease": null
+		}
+	]
+}
